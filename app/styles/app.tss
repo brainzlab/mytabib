@@ -1,0 +1,2993 @@
+/**
+ * 	Global Definitions
+ */
+'Window': {
+    backgroundColor: '#fff',
+    orientationModes: [Ti.UI.PORTRAIT,Ti.UI.LANDSCAPE_LEFT,Ti.UI.LANDSCAPE_RIGHT,Ti.UI.UPSIDE_PORTRAIT],
+	exitOnClose: true,
+	titleAttributes:  {
+        color: "white"
+	},
+   	hideShadow: true,
+},
+
+'Window[platform=android]': {
+    modal: false
+},
+
+'Label[platform=android]': {
+   color: '#000'
+},
+
+'TextField': {
+    borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE, // common default style
+    paddingLeft:5,
+    paddingRight:5,
+    bottom: 5,
+    backgroundColor: "#e7e7e7"
+},
+
+"ImageView":{
+	preventDefaultImage: true
+},
+
+"ListItem": {
+	backgroundImage: "/images/dot.png"
+}
+
+
+/**
+ * 	Window
+ */
+".hideNav":{
+    navBarHidden: true
+},
+
+".showNav":{
+    navBarHidden: false
+},
+
+".modal":{
+    modal: true
+},
+
+".fullscreen":{
+	fullscreen: true
+},
+
+
+/**
+ * 	Views
+ */
+".container-fluid" :{
+	width: Ti.UI.FILL,
+	height: Ti.UI.SIZE
+},
+
+".vgroup":{
+	layout: 'vertical'
+},
+
+".hgroup":{
+	layout: 'horizontal'
+},
+
+
+/**
+ * 	Sizes
+ */
+".fill":{
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL
+},
+
+".span-width":{
+	width: "100%",
+	height: Ti.UI.SIZE
+},
+
+".span-height":{
+	height: "100%",
+	width: Ti.UI.SIZE
+},
+
+".size":{
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE
+},
+
+
+/**
+ * 	Positioning
+ */
+".bottom":{
+	bottom: 0
+},
+
+".top":{
+	top: 0
+},
+
+".right":{
+	right: 0
+},
+
+".left":{
+	left: 0
+},
+
+".buffer":{
+	top: 10,
+	left: 10,
+	right: 10,
+	bottom: 10
+},
+
+".top-buffer":{
+	top: 10
+},
+
+".left-buffer":{
+	left: 10
+},
+
+".right-buffer":{
+	right: 10
+},
+
+".bottom-buffer":{
+	bottom: 10
+},
+
+
+/**
+ * 	Visibility
+ */
+".hide":{
+    visible: false
+},
+
+".show":{
+    visible: true
+},
+
+".transparent":{
+	opacity: 0.25
+},
+
+
+/**
+ * 	iOS Status Bar Style
+ */ 
+".sb-style-default[platform=ios]":{
+    statusBarStyle: Titanium.UI.iPhone.StatusBar.DEFAULT
+},
+
+".sb-style-gray[platform=ios]":{
+    statusBarStyle: Titanium.UI.iPhone.StatusBar.GRAY
+},
+
+".sb-style-opaque-black[platform=ios]":{
+    statusBarStyle: Titanium.UI.iPhone.StatusBar.OPAQUE_BLACK
+},
+
+".sb-style-light-content[platform=ios]":{
+    statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
+},
+
+".sb-style-translucent-black[platform=ios]":{
+    statusBarStyle: Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK 
+},
+
+
+/**
+ * 	Typography
+ */
+".h1":{
+	font:{
+		fontSize: 36
+	}
+},
+
+".h2":{
+	font:{
+		fontSize: 30
+	}
+},
+
+".h3":{
+	font:{
+		fontSize: 24
+	}
+},
+
+".h4":{
+	font:{
+		fontSize: 18
+	}
+},
+
+".h5":{
+	font:{
+		fontSize: 14
+	}
+},
+
+".h6":{
+	font:{
+		fontSize: 12
+	}
+},
+
+"Label": {
+	font: {
+		fontSize: 14
+	}
+}
+
+".normal-text":{
+	font:{
+		fontSize: 14
+	}
+},
+
+".small-text":{
+	font:{
+		fontSize: 12
+	}
+},
+
+".large-text":{
+	font:{
+		fontSize: 16
+	}
+},
+
+".bold" :{
+	font:{
+		fontWeight: 'bold'
+	}
+},
+
+".italic" : {
+	font: {
+		fontStyle: 'italic'
+	}
+},
+
+".underline" : {
+	font: {
+		fontStyle: 'underline'
+	}
+},
+
+".text-center":{
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+},
+
+".text-right":{
+  textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT
+},
+
+".text-left":{
+  textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
+},
+
+
+/**
+ * 	Color Classes
+ */
+".primary":{
+	color: "#2D8DD6"
+},
+
+".success":{
+	color: "#29C566"
+},
+
+".warn": {
+	color: "#EFBC12"
+},
+
+".error": {
+  color: "#CB564D"
+},
+
+".white":{
+  color: "#fff"
+},
+
+".gray": {
+	color: "#666"
+},
+
+".gray-light": {
+	color: "#999"
+},
+
+".gray-dark": {
+	color: "#333"
+}
+
+
+/**
+ * 	Shadows
+ */
+".shadow": {
+	top: 2,
+	right: 5,
+	left: 5,
+	bottom: 2,
+	borderRadius: 3,
+	backgroundColor: "#353535",
+    opacity: 0.05
+}
+
+".tile": {
+	top: 3,
+	right: 6,
+	left: 6,
+	bottom: 3,
+	borderRadius: 2,
+	backgroundColor: "#fff",
+}
+/**
+ * 	Lines
+ */
+".black-line":{
+	backgroundColor: "#000",
+	width: Ti.UI.FILL,
+	height: 1
+},
+
+".gray-line":{
+	backgroundColor: "#ececec",
+	width: Ti.UI.FILL,
+	height: 1
+},
+
+".white-line":{
+	backgroundColor: "#fff",
+	width: Ti.UI.FILL,
+	height: 1
+},
+
+
+/**
+ * 	Media
+ */
+".thumbnail":{
+	height: 75,
+	width: 75
+},
+
+".smooth-border": {
+	borderWidth: 1.5,
+	borderColor: "#ffffff",
+},
+
+
+/**
+ * 	Grid System
+ */
+".row":{
+    width: '100%',
+    height: Ti.UI.SIZE,
+    layout: 'horizontal'
+},
+
+".col-1": {
+    left: 0,
+    height: Ti.UI.SIZE,
+    width: "8.25%"
+},
+
+".col-2": {
+    left: 0,
+    height: Ti.UI.SIZE,
+    width: "16.50%"
+},
+
+".col-3": {
+    left: 0,
+    height: Ti.UI.SIZE,
+    width: "24.75%"
+},
+
+".col-4": {
+    left: 0,
+    height: Ti.UI.SIZE,
+    width: "33.33%"
+},
+
+".col-5": {
+    left: 0,
+    height: Ti.UI.SIZE,
+    width: "41.25%"
+},
+
+".col-6": {
+    left: 0,
+    height: Ti.UI.SIZE,
+    width: "49.9%",
+    backgroundColor: "gray"
+},
+
+".col-7": {
+    left: 0,
+    height: Ti.UI.SIZE,
+    width: "57.75%"
+},
+
+".col-8": {
+    left: 0,
+    height: Ti.UI.SIZE,
+    width: "66%"
+},
+
+".col-9": {
+    left: 0,
+    height: Ti.UI.SIZE,
+    width: "74.25%"
+},
+
+".col-10": {
+    left: 0,
+    height: Ti.UI.SIZE,
+    width: "82.50%"
+},
+
+".col-11": {
+    left: 0,
+    height: Ti.UI.SIZE,
+    width: "90.75%"
+},
+
+".col-12": {
+    left: 0,
+    height: Ti.UI.SIZE,
+    width: "100%"
+},
+
+
+/**
+ * Icons 	
+ */
+".icon": {
+  font: {
+    fontFamily: "icomoon" 
+  }
+},
+".icon-3d_rotation": {
+    text: "\ue900"
+},
+".icon-ac_unit": {
+    text: "\ue901"
+},
+".icon-alarm": {
+    text: "\ue902"
+},
+".icon-schedule": {
+    text: "\ue903"
+},
+".icon-accessibility": {
+    text: "\ue904"
+},
+".icon-accessible": {
+    text: "\ue905"
+},
+".icon-account_balance": {
+    text: "\ue906"
+},
+".icon-account_balance_wallet": {
+    text: "\ue907"
+},
+".icon-account_box": {
+    text: "\ue908"
+},
+".icon-account_circle": {
+    text: "\ue909"
+},
+".icon-adb": {
+    text: "\ue90a"
+},
+".icon-add": {
+    text: "\ue90b"
+},
+".icon-add_a_photo": {
+    text: "\ue90c"
+},
+".icon-alarm_add": {
+    text: "\ue90d"
+},
+".icon-add_alert": {
+    text: "\ue90e"
+},
+".icon-add_box": {
+    text: "\ue90f"
+},
+".icon-add_circle": {
+    text: "\ue910"
+},
+".icon-control_point": {
+    text: "\ue911"
+},
+".icon-add_location": {
+    text: "\ue912"
+},
+".icon-add_shopping_cart": {
+    text: "\ue913"
+},
+".icon-queue": {
+    text: "\ue914"
+},
+".icon-add_to_queue": {
+    text: "\ue915"
+},
+".icon-adjust": {
+    text: "\ue916"
+},
+".icon-airline_seat_flat": {
+    text: "\ue917"
+},
+".icon-airline_seat_flat_angled": {
+    text: "\ue918"
+},
+".icon-airline_seat_individual_suite": {
+    text: "\ue919"
+},
+".icon-airline_seat_legroom_extra": {
+    text: "\ue91a"
+},
+".icon-airline_seat_legroom_normal": {
+    text: "\ue91b"
+},
+".icon-airline_seat_legroom_reduced": {
+    text: "\ue91c"
+},
+".icon-airline_seat_recline_extra": {
+    text: "\ue91d"
+},
+".icon-airline_seat_recline_normal": {
+    text: "\ue91e"
+},
+".icon-flight": {
+    text: "\ue91f"
+},
+".icon-airplanemode_inactive": {
+    text: "\ue920"
+},
+".icon-airplay": {
+    text: "\ue921"
+},
+".icon-airport_shuttle": {
+    text: "\ue922"
+},
+".icon-alarm_off": {
+    text: "\ue923"
+},
+".icon-alarm_on": {
+    text: "\ue924"
+},
+".icon-album": {
+    text: "\ue925"
+},
+".icon-all_inclusive": {
+    text: "\ue926"
+},
+".icon-all_out": {
+    text: "\ue927"
+},
+".icon-android": {
+    text: "\ue928"
+},
+".icon-announcement": {
+    text: "\ue929"
+},
+".icon-apps": {
+    text: "\ue92a"
+},
+".icon-archive": {
+    text: "\ue92b"
+},
+".icon-arrow_back": {
+    text: "\ue92c"
+},
+".icon-arrow_downward": {
+    text: "\ue92d"
+},
+".icon-arrow_drop_down": {
+    text: "\ue92e"
+},
+".icon-arrow_drop_down_circle": {
+    text: "\ue92f"
+},
+".icon-arrow_drop_up": {
+    text: "\ue930"
+},
+".icon-arrow_forward": {
+    text: "\ue931"
+},
+".icon-arrow_upward": {
+    text: "\ue932"
+},
+".icon-art_track": {
+    text: "\ue933"
+},
+".icon-aspect_ratio": {
+    text: "\ue934"
+},
+".icon-poll": {
+    text: "\ue935"
+},
+".icon-assignment": {
+    text: "\ue936"
+},
+".icon-assignment_ind": {
+    text: "\ue937"
+},
+".icon-assignment_late": {
+    text: "\ue938"
+},
+".icon-assignment_return": {
+    text: "\ue939"
+},
+".icon-assignment_returned": {
+    text: "\ue93a"
+},
+".icon-assignment_turned_in": {
+    text: "\ue93b"
+},
+".icon-assistant": {
+    text: "\ue93c"
+},
+".icon-flag": {
+    text: "\ue93d"
+},
+".icon-attach_file": {
+    text: "\ue93e"
+},
+".icon-attach_money": {
+    text: "\ue93f"
+},
+".icon-attachment": {
+    text: "\ue940"
+},
+".icon-audiotrack": {
+    text: "\ue941"
+},
+".icon-autorenew": {
+    text: "\ue942"
+},
+".icon-av_timer": {
+    text: "\ue943"
+},
+".icon-backspace": {
+    text: "\ue944"
+},
+".icon-cloud_upload": {
+    text: "\ue945"
+},
+".icon-battery_alert": {
+    text: "\ue946"
+},
+".icon-battery_charging_full": {
+    text: "\ue947"
+},
+".icon-battery_std": {
+    text: "\ue948"
+},
+".icon-battery_unknown": {
+    text: "\ue949"
+},
+".icon-beach_access": {
+    text: "\ue94a"
+},
+".icon-beenhere": {
+    text: "\ue94b"
+},
+".icon-block": {
+    text: "\ue94c"
+},
+".icon-bluetooth": {
+    text: "\ue94d"
+},
+".icon-bluetooth_searching": {
+    text: "\ue94e"
+},
+".icon-bluetooth_connected": {
+    text: "\ue94f"
+},
+".icon-bluetooth_disabled": {
+    text: "\ue950"
+},
+".icon-blur_circular": {
+    text: "\ue951"
+},
+".icon-blur_linear": {
+    text: "\ue952"
+},
+".icon-blur_off": {
+    text: "\ue953"
+},
+".icon-blur_on": {
+    text: "\ue954"
+},
+".icon-class": {
+    text: "\ue955"
+},
+".icon-turned_in": {
+    text: "\ue956"
+},
+".icon-turned_in_not": {
+    text: "\ue957"
+},
+".icon-border_all": {
+    text: "\ue958"
+},
+".icon-border_bottom": {
+    text: "\ue959"
+},
+".icon-border_clear": {
+    text: "\ue95a"
+},
+".icon-border_color": {
+    text: "\ue95b"
+},
+".icon-border_horizontal": {
+    text: "\ue95c"
+},
+".icon-border_inner": {
+    text: "\ue95d"
+},
+".icon-border_left": {
+    text: "\ue95e"
+},
+".icon-border_outer": {
+    text: "\ue95f"
+},
+".icon-border_right": {
+    text: "\ue960"
+},
+".icon-border_style": {
+    text: "\ue961"
+},
+".icon-border_top": {
+    text: "\ue962"
+},
+".icon-border_vertical": {
+    text: "\ue963"
+},
+".icon-branding_watermark": {
+    text: "\ue964"
+},
+".icon-brightness_1": {
+    text: "\ue965"
+},
+".icon-brightness_2": {
+    text: "\ue966"
+},
+".icon-brightness_3": {
+    text: "\ue967"
+},
+".icon-brightness_4": {
+    text: "\ue968"
+},
+".icon-brightness_low": {
+    text: "\ue969"
+},
+".icon-brightness_medium": {
+    text: "\ue96a"
+},
+".icon-brightness_high": {
+    text: "\ue96b"
+},
+".icon-brightness_auto": {
+    text: "\ue96c"
+},
+".icon-broken_image": {
+    text: "\ue96d"
+},
+".icon-brush": {
+    text: "\ue96e"
+},
+".icon-bubble_chart": {
+    text: "\ue96f"
+},
+".icon-bug_report": {
+    text: "\ue970"
+},
+".icon-build": {
+    text: "\ue971"
+},
+".icon-burst_mode": {
+    text: "\ue972"
+},
+".icon-domain": {
+    text: "\ue973"
+},
+".icon-business_center": {
+    text: "\ue974"
+},
+".icon-cached": {
+    text: "\ue975"
+},
+".icon-cake": {
+    text: "\ue976"
+},
+".icon-phone": {
+    text: "\ue977"
+},
+".icon-call_end": {
+    text: "\ue978"
+},
+".icon-call_made": {
+    text: "\ue979"
+},
+".icon-merge_type": {
+    text: "\ue97a"
+},
+".icon-call_missed": {
+    text: "\ue97b"
+},
+".icon-call_missed_outgoing": {
+    text: "\ue97c"
+},
+".icon-call_received": {
+    text: "\ue97d"
+},
+".icon-call_split": {
+    text: "\ue97e"
+},
+".icon-call_to_action": {
+    text: "\ue97f"
+},
+".icon-camera": {
+    text: "\ue980"
+},
+".icon-photo_camera": {
+    text: "\ue981"
+},
+".icon-camera_enhance": {
+    text: "\ue982"
+},
+".icon-camera_front": {
+    text: "\ue983"
+},
+".icon-camera_rear": {
+    text: "\ue984"
+},
+".icon-camera_roll": {
+    text: "\ue985"
+},
+".icon-cancel": {
+    text: "\ue986"
+},
+".icon-redeem": {
+    text: "\ue987"
+},
+".icon-card_membership": {
+    text: "\ue988"
+},
+".icon-card_travel": {
+    text: "\ue989"
+},
+".icon-casino": {
+    text: "\ue98a"
+},
+".icon-cast": {
+    text: "\ue98b"
+},
+".icon-cast_connected": {
+    text: "\ue98c"
+},
+".icon-center_focus_strong": {
+    text: "\ue98d"
+},
+".icon-center_focus_weak": {
+    text: "\ue98e"
+},
+".icon-change_history": {
+    text: "\ue98f"
+},
+".icon-chat": {
+    text: "\ue990"
+},
+".icon-chat_bubble": {
+    text: "\ue991"
+},
+".icon-chat_bubble_outline": {
+    text: "\ue992"
+},
+".icon-check": {
+    text: "\ue993"
+},
+".icon-check_box": {
+    text: "\ue994"
+},
+".icon-check_box_outline_blank": {
+    text: "\ue995"
+},
+".icon-check_circle": {
+    text: "\ue996"
+},
+".icon-navigate_before": {
+    text: "\ue997"
+},
+".icon-navigate_next": {
+    text: "\ue998"
+},
+".icon-child_care": {
+    text: "\ue999"
+},
+".icon-child_friendly": {
+    text: "\ue99a"
+},
+".icon-chrome_reader_mode": {
+    text: "\ue99b"
+},
+".icon-close": {
+    text: "\ue99c"
+},
+".icon-clear_all": {
+    text: "\ue99d"
+},
+".icon-closed_caption": {
+    text: "\ue99e"
+},
+".icon-wb_cloudy": {
+    text: "\ue99f"
+},
+".icon-cloud_circle": {
+    text: "\ue9a0"
+},
+".icon-cloud_done": {
+    text: "\ue9a1"
+},
+".icon-cloud_download": {
+    text: "\ue9a2"
+},
+".icon-cloud_off": {
+    text: "\ue9a3"
+},
+".icon-cloud_queue": {
+    text: "\ue9a4"
+},
+".icon-code": {
+    text: "\ue9a5"
+},
+".icon-photo_library": {
+    text: "\ue9a6"
+},
+".icon-collections_bookmark": {
+    text: "\ue9a7"
+},
+".icon-palette": {
+    text: "\ue9a8"
+},
+".icon-colorize": {
+    text: "\ue9a9"
+},
+".icon-comment": {
+    text: "\ue9aa"
+},
+".icon-compare": {
+    text: "\ue9ab"
+},
+".icon-compare_arrows": {
+    text: "\ue9ac"
+},
+".icon-laptop": {
+    text: "\ue9ad"
+},
+".icon-confirmation_number": {
+    text: "\ue9ae"
+},
+".icon-contact_mail": {
+    text: "\ue9af"
+},
+".icon-contact_phone": {
+    text: "\ue9b0"
+},
+".icon-contacts": {
+    text: "\ue9b1"
+},
+".icon-content_copy": {
+    text: "\ue9b2"
+},
+".icon-content_cut": {
+    text: "\ue9b3"
+},
+".icon-content_paste": {
+    text: "\ue9b4"
+},
+".icon-control_point_duplicate": {
+    text: "\ue9b5"
+},
+".icon-copyright": {
+    text: "\ue9b6"
+},
+".icon-mode_edit": {
+    text: "\ue9b7"
+},
+".icon-create_new_folder": {
+    text: "\ue9b8"
+},
+".icon-payment": {
+    text: "\ue9b9"
+},
+".icon-crop": {
+    text: "\ue9ba"
+},
+".icon-crop_16_9": {
+    text: "\ue9bb"
+},
+".icon-crop_3_2": {
+    text: "\ue9bc"
+},
+".icon-crop_landscape": {
+    text: "\ue9bd"
+},
+".icon-crop_7_5": {
+    text: "\ue9be"
+},
+".icon-crop_din": {
+    text: "\ue9bf"
+},
+".icon-crop_free": {
+    text: "\ue9c0"
+},
+".icon-crop_original": {
+    text: "\ue9c1"
+},
+".icon-crop_portrait": {
+    text: "\ue9c2"
+},
+".icon-crop_rotate": {
+    text: "\ue9c3"
+},
+".icon-crop_square": {
+    text: "\ue9c4"
+},
+".icon-dashboard": {
+    text: "\ue9c5"
+},
+".icon-data_usage": {
+    text: "\ue9c6"
+},
+".icon-date_range": {
+    text: "\ue9c7"
+},
+".icon-dehaze": {
+    text: "\ue9c8"
+},
+".icon-delete": {
+    text: "\ue9c9"
+},
+".icon-delete_forever": {
+    text: "\ue9ca"
+},
+".icon-delete_sweep": {
+    text: "\ue9cb"
+},
+".icon-description": {
+    text: "\ue9cc"
+},
+".icon-desktop_mac": {
+    text: "\ue9cd"
+},
+".icon-desktop_windows": {
+    text: "\ue9ce"
+},
+".icon-details": {
+    text: "\ue9cf"
+},
+".icon-developer_board": {
+    text: "\ue9d0"
+},
+".icon-developer_mode": {
+    text: "\ue9d1"
+},
+".icon-device_hub": {
+    text: "\ue9d2"
+},
+".icon-phonelink": {
+    text: "\ue9d3"
+},
+".icon-devices_other": {
+    text: "\ue9d4"
+},
+".icon-dialer_sip": {
+    text: "\ue9d5"
+},
+".icon-dialpad": {
+    text: "\ue9d6"
+},
+".icon-directions": {
+    text: "\ue9d7"
+},
+".icon-directions_bike": {
+    text: "\ue9d8"
+},
+".icon-directions_boat": {
+    text: "\ue9d9"
+},
+".icon-directions_bus": {
+    text: "\ue9da"
+},
+".icon-directions_car": {
+    text: "\ue9db"
+},
+".icon-directions_railway": {
+    text: "\ue9dc"
+},
+".icon-directions_run": {
+    text: "\ue9dd"
+},
+".icon-directions_transit": {
+    text: "\ue9de"
+},
+".icon-directions_walk": {
+    text: "\ue9df"
+},
+".icon-disc_full": {
+    text: "\ue9e0"
+},
+".icon-dns": {
+    text: "\ue9e1"
+},
+".icon-not_interested": {
+    text: "\ue9e2"
+},
+".icon-do_not_disturb_alt": {
+    text: "\ue9e3"
+},
+".icon-do_not_disturb_off": {
+    text: "\ue9e4"
+},
+".icon-remove_circle": {
+    text: "\ue9e5"
+},
+".icon-dock": {
+    text: "\ue9e6"
+},
+".icon-done": {
+    text: "\ue9e7"
+},
+".icon-done_all": {
+    text: "\ue9e8"
+},
+".icon-donut_large": {
+    text: "\ue9e9"
+},
+".icon-donut_small": {
+    text: "\ue9ea"
+},
+".icon-drafts": {
+    text: "\ue9eb"
+},
+".icon-drag_handle": {
+    text: "\ue9ec"
+},
+".icon-time_to_leave": {
+    text: "\ue9ed"
+},
+".icon-dvr": {
+    text: "\ue9ee"
+},
+".icon-edit_location": {
+    text: "\ue9ef"
+},
+".icon-eject": {
+    text: "\ue9f0"
+},
+".icon-markunread": {
+    text: "\ue9f1"
+},
+".icon-enhanced_encryption": {
+    text: "\ue9f2"
+},
+".icon-equalizer": {
+    text: "\ue9f3"
+},
+".icon-error": {
+    text: "\ue9f4"
+},
+".icon-error_outline": {
+    text: "\ue9f5"
+},
+".icon-euro_symbol": {
+    text: "\ue9f6"
+},
+".icon-ev_station": {
+    text: "\ue9f7"
+},
+".icon-insert_invitation": {
+    text: "\ue9f8"
+},
+".icon-event_available": {
+    text: "\ue9f9"
+},
+".icon-event_busy": {
+    text: "\ue9fa"
+},
+".icon-event_note": {
+    text: "\ue9fb"
+},
+".icon-event_seat": {
+    text: "\ue9fc"
+},
+".icon-exit_to_app": {
+    text: "\ue9fd"
+},
+".icon-expand_less": {
+    text: "\ue9fe"
+},
+".icon-expand_more": {
+    text: "\ue9ff"
+},
+".icon-explicit": {
+    text: "\uea00"
+},
+".icon-explore": {
+    text: "\uea01"
+},
+".icon-exposure": {
+    text: "\uea02"
+},
+".icon-exposure_neg_1": {
+    text: "\uea03"
+},
+".icon-exposure_neg_2": {
+    text: "\uea04"
+},
+".icon-exposure_plus_1": {
+    text: "\uea05"
+},
+".icon-exposure_plus_2": {
+    text: "\uea06"
+},
+".icon-exposure_zero": {
+    text: "\uea07"
+},
+".icon-extension": {
+    text: "\uea08"
+},
+".icon-face": {
+    text: "\uea09"
+},
+".icon-fast_forward": {
+    text: "\uea0a"
+},
+".icon-fast_rewind": {
+    text: "\uea0b"
+},
+".icon-favorite": {
+    text: "\uea0c"
+},
+".icon-favorite_border": {
+    text: "\uea0d"
+},
+".icon-featured_play_list": {
+    text: "\uea0e"
+},
+".icon-featured_video": {
+    text: "\uea0f"
+},
+".icon-sms_failed": {
+    text: "\uea10"
+},
+".icon-fiber_dvr": {
+    text: "\uea11"
+},
+".icon-fiber_manual_record": {
+    text: "\uea12"
+},
+".icon-fiber_new": {
+    text: "\uea13"
+},
+".icon-fiber_pin": {
+    text: "\uea14"
+},
+".icon-fiber_smart_record": {
+    text: "\uea15"
+},
+".icon-get_app": {
+    text: "\uea16"
+},
+".icon-file_upload": {
+    text: "\uea17"
+},
+".icon-filter": {
+    text: "\uea18"
+},
+".icon-filter_1": {
+    text: "\uea19"
+},
+".icon-filter_2": {
+    text: "\uea1a"
+},
+".icon-filter_3": {
+    text: "\uea1b"
+},
+".icon-filter_4": {
+    text: "\uea1c"
+},
+".icon-filter_5": {
+    text: "\uea1d"
+},
+".icon-filter_6": {
+    text: "\uea1e"
+},
+".icon-filter_7": {
+    text: "\uea1f"
+},
+".icon-filter_8": {
+    text: "\uea20"
+},
+".icon-filter_9": {
+    text: "\uea21"
+},
+".icon-filter_9_plus": {
+    text: "\uea22"
+},
+".icon-filter_b_and_w": {
+    text: "\uea23"
+},
+".icon-filter_center_focus": {
+    text: "\uea24"
+},
+".icon-filter_drama": {
+    text: "\uea25"
+},
+".icon-filter_frames": {
+    text: "\uea26"
+},
+".icon-terrain": {
+    text: "\uea27"
+},
+".icon-filter_list": {
+    text: "\uea28"
+},
+".icon-filter_none": {
+    text: "\uea29"
+},
+".icon-filter_tilt_shift": {
+    text: "\uea2a"
+},
+".icon-filter_vintage": {
+    text: "\uea2b"
+},
+".icon-find_in_page": {
+    text: "\uea2c"
+},
+".icon-find_replace": {
+    text: "\uea2d"
+},
+".icon-fingerprint": {
+    text: "\uea2e"
+},
+".icon-first_page": {
+    text: "\uea2f"
+},
+".icon-fitness_center": {
+    text: "\uea30"
+},
+".icon-flare": {
+    text: "\uea31"
+},
+".icon-flash_auto": {
+    text: "\uea32"
+},
+".icon-flash_off": {
+    text: "\uea33"
+},
+".icon-flash_on": {
+    text: "\uea34"
+},
+".icon-flight_land": {
+    text: "\uea35"
+},
+".icon-flight_takeoff": {
+    text: "\uea36"
+},
+".icon-flip": {
+    text: "\uea37"
+},
+".icon-flip_to_back": {
+    text: "\uea38"
+},
+".icon-flip_to_front": {
+    text: "\uea39"
+},
+".icon-folder": {
+    text: "\uea3a"
+},
+".icon-folder_open": {
+    text: "\uea3b"
+},
+".icon-folder_shared": {
+    text: "\uea3c"
+},
+".icon-folder_special": {
+    text: "\uea3d"
+},
+".icon-font_download": {
+    text: "\uea3e"
+},
+".icon-format_align_center": {
+    text: "\uea3f"
+},
+".icon-format_align_justify": {
+    text: "\uea40"
+},
+".icon-format_align_left": {
+    text: "\uea41"
+},
+".icon-format_align_right": {
+    text: "\uea42"
+},
+".icon-format_bold": {
+    text: "\uea43"
+},
+".icon-format_clear": {
+    text: "\uea44"
+},
+".icon-format_color_fill": {
+    text: "\uea45"
+},
+".icon-format_color_reset": {
+    text: "\uea46"
+},
+".icon-format_color_text": {
+    text: "\uea47"
+},
+".icon-format_indent_decrease": {
+    text: "\uea48"
+},
+".icon-format_indent_increase": {
+    text: "\uea49"
+},
+".icon-format_italic": {
+    text: "\uea4a"
+},
+".icon-format_line_spacing": {
+    text: "\uea4b"
+},
+".icon-format_list_bulleted": {
+    text: "\uea4c"
+},
+".icon-format_list_numbered": {
+    text: "\uea4d"
+},
+".icon-format_paint": {
+    text: "\uea4e"
+},
+".icon-format_quote": {
+    text: "\uea4f"
+},
+".icon-format_shapes": {
+    text: "\uea50"
+},
+".icon-format_size": {
+    text: "\uea51"
+},
+".icon-format_strikethrough": {
+    text: "\uea52"
+},
+".icon-format_textdirection_l_to_r": {
+    text: "\uea53"
+},
+".icon-format_textdirection_r_to_l": {
+    text: "\uea54"
+},
+".icon-format_underlined": {
+    text: "\uea55"
+},
+".icon-question_answer": {
+    text: "\uea56"
+},
+".icon-forward": {
+    text: "\uea57"
+},
+".icon-forward_10": {
+    text: "\uea58"
+},
+".icon-forward_30": {
+    text: "\uea59"
+},
+".icon-forward_5": {
+    text: "\uea5a"
+},
+".icon-free_breakfast": {
+    text: "\uea5b"
+},
+".icon-fullscreen": {
+    text: "\uea5c"
+},
+".icon-fullscreen_exit": {
+    text: "\uea5d"
+},
+".icon-functions": {
+    text: "\uea5e"
+},
+".icon-g_translate": {
+    text: "\uea5f"
+},
+".icon-games": {
+    text: "\uea60"
+},
+".icon-gavel": {
+    text: "\uea61"
+},
+".icon-gesture": {
+    text: "\uea62"
+},
+".icon-gif": {
+    text: "\uea63"
+},
+".icon-goat": {
+    text: "\uea64"
+},
+".icon-golf_course": {
+    text: "\uea65"
+},
+".icon-my_location": {
+    text: "\uea66"
+},
+".icon-location_searching": {
+    text: "\uea67"
+},
+".icon-location_disabled": {
+    text: "\uea68"
+},
+".icon-star": {
+    text: "\uea69"
+},
+".icon-gradient": {
+    text: "\uea6a"
+},
+".icon-grain": {
+    text: "\uea6b"
+},
+".icon-graphic_eq": {
+    text: "\uea6c"
+},
+".icon-grid_off": {
+    text: "\uea6d"
+},
+".icon-grid_on": {
+    text: "\uea6e"
+},
+".icon-people": {
+    text: "\uea6f"
+},
+".icon-group_add": {
+    text: "\uea70"
+},
+".icon-group_work": {
+    text: "\uea71"
+},
+".icon-hd": {
+    text: "\uea72"
+},
+".icon-hdr_off": {
+    text: "\uea73"
+},
+".icon-hdr_on": {
+    text: "\uea74"
+},
+".icon-hdr_strong": {
+    text: "\uea75"
+},
+".icon-hdr_weak": {
+    text: "\uea76"
+},
+".icon-headset": {
+    text: "\uea77"
+},
+".icon-headset_mic": {
+    text: "\uea78"
+},
+".icon-healing": {
+    text: "\uea79"
+},
+".icon-hearing": {
+    text: "\uea7a"
+},
+".icon-help": {
+    text: "\uea7b"
+},
+".icon-help_outline": {
+    text: "\uea7c"
+},
+".icon-high_quality": {
+    text: "\uea7d"
+},
+".icon-highlight": {
+    text: "\uea7e"
+},
+".icon-highlight_off": {
+    text: "\uea7f"
+},
+".icon-restore": {
+    text: "\uea80"
+},
+".icon-home": {
+    text: "\uea81"
+},
+".icon-hot_tub": {
+    text: "\uea82"
+},
+".icon-local_hotel": {
+    text: "\uea83"
+},
+".icon-hourglass_empty": {
+    text: "\uea84"
+},
+".icon-hourglass_full": {
+    text: "\uea85"
+},
+".icon-http": {
+    text: "\uea86"
+},
+".icon-lock": {
+    text: "\uea87"
+},
+".icon-photo": {
+    text: "\uea88"
+},
+".icon-image_aspect_ratio": {
+    text: "\uea89"
+},
+".icon-import_contacts": {
+    text: "\uea8a"
+},
+".icon-import_export": {
+    text: "\uea8b"
+},
+".icon-important_devices": {
+    text: "\uea8c"
+},
+".icon-inbox": {
+    text: "\uea8d"
+},
+".icon-indeterminate_check_box": {
+    text: "\uea8e"
+},
+".icon-info": {
+    text: "\uea8f"
+},
+".icon-info_outline": {
+    text: "\uea90"
+},
+".icon-input": {
+    text: "\uea91"
+},
+".icon-insert_comment": {
+    text: "\uea92"
+},
+".icon-insert_drive_file": {
+    text: "\uea93"
+},
+".icon-tag_faces": {
+    text: "\uea94"
+},
+".icon-link": {
+    text: "\uea95"
+},
+".icon-invert_colors": {
+    text: "\uea96"
+},
+".icon-invert_colors_off": {
+    text: "\uea97"
+},
+".icon-iso": {
+    text: "\uea98"
+},
+".icon-keyboard": {
+    text: "\uea99"
+},
+".icon-keyboard_arrow_down": {
+    text: "\uea9a"
+},
+".icon-keyboard_arrow_left": {
+    text: "\uea9b"
+},
+".icon-keyboard_arrow_right": {
+    text: "\uea9c"
+},
+".icon-keyboard_arrow_up": {
+    text: "\uea9d"
+},
+".icon-keyboard_backspace": {
+    text: "\uea9e"
+},
+".icon-keyboard_capslock": {
+    text: "\uea9f"
+},
+".icon-keyboard_hide": {
+    text: "\ueaa0"
+},
+".icon-keyboard_return": {
+    text: "\ueaa1"
+},
+".icon-keyboard_tab": {
+    text: "\ueaa2"
+},
+".icon-keyboard_voice": {
+    text: "\ueaa3"
+},
+".icon-kitchen": {
+    text: "\ueaa4"
+},
+".icon-label": {
+    text: "\ueaa5"
+},
+".icon-label_outline": {
+    text: "\ueaa6"
+},
+".icon-language": {
+    text: "\ueaa7"
+},
+".icon-laptop_chromebook": {
+    text: "\ueaa8"
+},
+".icon-laptop_mac": {
+    text: "\ueaa9"
+},
+".icon-laptop_windows": {
+    text: "\ueaaa"
+},
+".icon-last_page": {
+    text: "\ueaab"
+},
+".icon-open_in_new": {
+    text: "\ueaac"
+},
+".icon-layers": {
+    text: "\ueaad"
+},
+".icon-layers_clear": {
+    text: "\ueaae"
+},
+".icon-leak_add": {
+    text: "\ueaaf"
+},
+".icon-leak_remove": {
+    text: "\ueab0"
+},
+".icon-lens": {
+    text: "\ueab1"
+},
+".icon-library_books": {
+    text: "\ueab2"
+},
+".icon-library_music": {
+    text: "\ueab3"
+},
+".icon-lightbulb_outline": {
+    text: "\ueab4"
+},
+".icon-line_style": {
+    text: "\ueab5"
+},
+".icon-line_weight": {
+    text: "\ueab6"
+},
+".icon-linear_scale": {
+    text: "\ueab7"
+},
+".icon-linked_camera": {
+    text: "\ueab8"
+},
+".icon-list": {
+    text: "\ueab9"
+},
+".icon-live_help": {
+    text: "\ueaba"
+},
+".icon-live_tv": {
+    text: "\ueabb"
+},
+".icon-local_play": {
+    text: "\ueabc"
+},
+".icon-local_airport": {
+    text: "\ueabd"
+},
+".icon-local_atm": {
+    text: "\ueabe"
+},
+".icon-local_bar": {
+    text: "\ueabf"
+},
+".icon-local_cafe": {
+    text: "\ueac0"
+},
+".icon-local_car_wash": {
+    text: "\ueac1"
+},
+".icon-local_convenience_store": {
+    text: "\ueac2"
+},
+".icon-restaurant_menu": {
+    text: "\ueac3"
+},
+".icon-local_drink": {
+    text: "\ueac4"
+},
+".icon-local_florist": {
+    text: "\ueac5"
+},
+".icon-local_gas_station": {
+    text: "\ueac6"
+},
+".icon-shopping_cart": {
+    text: "\ueac7"
+},
+".icon-local_hospital": {
+    text: "\ueac8"
+},
+".icon-local_laundry_service": {
+    text: "\ueac9"
+},
+".icon-local_library": {
+    text: "\ueaca"
+},
+".icon-local_mall": {
+    text: "\ueacb"
+},
+".icon-theaters": {
+    text: "\ueacc"
+},
+".icon-local_offer": {
+    text: "\ueacd"
+},
+".icon-local_parking": {
+    text: "\ueace"
+},
+".icon-local_pharmacy": {
+    text: "\ueacf"
+},
+".icon-local_pizza": {
+    text: "\uead0"
+},
+".icon-print": {
+    text: "\uead1"
+},
+".icon-local_shipping": {
+    text: "\uead2"
+},
+".icon-local_taxi": {
+    text: "\uead3"
+},
+".icon-location_city": {
+    text: "\uead4"
+},
+".icon-location_off": {
+    text: "\uead5"
+},
+".icon-room": {
+    text: "\uead6"
+},
+".icon-lock_open": {
+    text: "\uead7"
+},
+".icon-lock_outline": {
+    text: "\uead8"
+},
+".icon-looks": {
+    text: "\uead9"
+},
+".icon-looks_3": {
+    text: "\ueada"
+},
+".icon-looks_4": {
+    text: "\ueadb"
+},
+".icon-looks_5": {
+    text: "\ueadc"
+},
+".icon-looks_6": {
+    text: "\ueadd"
+},
+".icon-looks_one": {
+    text: "\ueade"
+},
+".icon-looks_two": {
+    text: "\ueadf"
+},
+".icon-sync": {
+    text: "\ueae0"
+},
+".icon-loupe": {
+    text: "\ueae1"
+},
+".icon-low_priority": {
+    text: "\ueae2"
+},
+".icon-loyalty": {
+    text: "\ueae3"
+},
+".icon-mail_outline": {
+    text: "\ueae4"
+},
+".icon-map": {
+    text: "\ueae5"
+},
+".icon-markunread_mailbox": {
+    text: "\ueae6"
+},
+".icon-memory": {
+    text: "\ueae7"
+},
+".icon-menu": {
+    text: "\ueae8"
+},
+".icon-message": {
+    text: "\ueae9"
+},
+".icon-mic": {
+    text: "\ueaea"
+},
+".icon-mic_none": {
+    text: "\ueaeb"
+},
+".icon-mic_off": {
+    text: "\ueaec"
+},
+".icon-mms": {
+    text: "\ueaed"
+},
+".icon-mode_comment": {
+    text: "\ueaee"
+},
+".icon-monetization_on": {
+    text: "\ueaef"
+},
+".icon-money_off": {
+    text: "\ueaf0"
+},
+".icon-monochrome_photos": {
+    text: "\ueaf1"
+},
+".icon-mood_bad": {
+    text: "\ueaf2"
+},
+".icon-more": {
+    text: "\ueaf3"
+},
+".icon-more_horiz": {
+    text: "\ueaf4"
+},
+".icon-more_vert": {
+    text: "\ueaf5"
+},
+".icon-motorcycle": {
+    text: "\ueaf6"
+},
+".icon-mouse": {
+    text: "\ueaf7"
+},
+".icon-move_to_inbox": {
+    text: "\ueaf8"
+},
+".icon-movie_creation": {
+    text: "\ueaf9"
+},
+".icon-movie_filter": {
+    text: "\ueafa"
+},
+".icon-multiline_chart": {
+    text: "\ueafb"
+},
+".icon-music_note": {
+    text: "\ueafc"
+},
+".icon-music_video": {
+    text: "\ueafd"
+},
+".icon-nature": {
+    text: "\ueafe"
+},
+".icon-nature_people": {
+    text: "\ueaff"
+},
+".icon-navigation": {
+    text: "\ueb00"
+},
+".icon-near_me": {
+    text: "\ueb01"
+},
+".icon-network_cell": {
+    text: "\ueb02"
+},
+".icon-network_check": {
+    text: "\ueb03"
+},
+".icon-network_locked": {
+    text: "\ueb04"
+},
+".icon-network_wifi": {
+    text: "\ueb05"
+},
+".icon-new_releases": {
+    text: "\ueb06"
+},
+".icon-next_week": {
+    text: "\ueb07"
+},
+".icon-nfc": {
+    text: "\ueb08"
+},
+".icon-no_encryption": {
+    text: "\ueb09"
+},
+".icon-signal_cellular_no_sim": {
+    text: "\ueb0a"
+},
+".icon-note": {
+    text: "\ueb0b"
+},
+".icon-note_add": {
+    text: "\ueb0c"
+},
+".icon-notifications": {
+    text: "\ueb0d"
+},
+".icon-notifications_active": {
+    text: "\ueb0e"
+},
+".icon-notifications_none": {
+    text: "\ueb0f"
+},
+".icon-notifications_off": {
+    text: "\ueb10"
+},
+".icon-notifications_paused": {
+    text: "\ueb11"
+},
+".icon-offline_pin": {
+    text: "\ueb12"
+},
+".icon-ondemand_video": {
+    text: "\ueb13"
+},
+".icon-opacity": {
+    text: "\ueb14"
+},
+".icon-open_in_browser": {
+    text: "\ueb15"
+},
+".icon-open_with": {
+    text: "\ueb16"
+},
+".icon-pages": {
+    text: "\ueb17"
+},
+".icon-pageview": {
+    text: "\ueb18"
+},
+".icon-pan_tool": {
+    text: "\ueb19"
+},
+".icon-panorama": {
+    text: "\ueb1a"
+},
+".icon-radio_button_unchecked": {
+    text: "\ueb1b"
+},
+".icon-panorama_horizontal": {
+    text: "\ueb1c"
+},
+".icon-panorama_vertical": {
+    text: "\ueb1d"
+},
+".icon-panorama_wide_angle": {
+    text: "\ueb1e"
+},
+".icon-party_mode": {
+    text: "\ueb1f"
+},
+".icon-pause": {
+    text: "\ueb20"
+},
+".icon-pause_circle_filled": {
+    text: "\ueb21"
+},
+".icon-pause_circle_outline": {
+    text: "\ueb22"
+},
+".icon-people_outline": {
+    text: "\ueb23"
+},
+".icon-perm_camera_mic": {
+    text: "\ueb24"
+},
+".icon-perm_contact_calendar": {
+    text: "\ueb25"
+},
+".icon-perm_data_setting": {
+    text: "\ueb26"
+},
+".icon-perm_device_information": {
+    text: "\ueb27"
+},
+".icon-person_outline": {
+    text: "\ueb28"
+},
+".icon-perm_media": {
+    text: "\ueb29"
+},
+".icon-perm_phone_msg": {
+    text: "\ueb2a"
+},
+".icon-perm_scan_wifi": {
+    text: "\ueb2b"
+},
+".icon-person": {
+    text: "\ueb2c"
+},
+".icon-person_add": {
+    text: "\ueb2d"
+},
+".icon-person_pin": {
+    text: "\ueb2e"
+},
+".icon-person_pin_circle": {
+    text: "\ueb2f"
+},
+".icon-personal_video": {
+    text: "\ueb30"
+},
+".icon-pets": {
+    text: "\ueb31"
+},
+".icon-phone_android": {
+    text: "\ueb32"
+},
+".icon-phone_bluetooth_speaker": {
+    text: "\ueb33"
+},
+".icon-phone_forwarded": {
+    text: "\ueb34"
+},
+".icon-phone_in_talk": {
+    text: "\ueb35"
+},
+".icon-phone_iphone": {
+    text: "\ueb36"
+},
+".icon-phone_locked": {
+    text: "\ueb37"
+},
+".icon-phone_missed": {
+    text: "\ueb38"
+},
+".icon-phone_paused": {
+    text: "\ueb39"
+},
+".icon-phonelink_erase": {
+    text: "\ueb3a"
+},
+".icon-phonelink_lock": {
+    text: "\ueb3b"
+},
+".icon-phonelink_off": {
+    text: "\ueb3c"
+},
+".icon-phonelink_ring": {
+    text: "\ueb3d"
+},
+".icon-phonelink_setup": {
+    text: "\ueb3e"
+},
+".icon-photo_album": {
+    text: "\ueb3f"
+},
+".icon-photo_filter": {
+    text: "\ueb40"
+},
+".icon-photo_size_select_actual": {
+    text: "\ueb41"
+},
+".icon-photo_size_select_large": {
+    text: "\ueb42"
+},
+".icon-photo_size_select_small": {
+    text: "\ueb43"
+},
+".icon-picture_as_pdf": {
+    text: "\ueb44"
+},
+".icon-picture_in_picture": {
+    text: "\ueb45"
+},
+".icon-picture_in_picture_alt": {
+    text: "\ueb46"
+},
+".icon-pie_chart": {
+    text: "\ueb47"
+},
+".icon-pie_chart_outlined": {
+    text: "\ueb48"
+},
+".icon-pin_drop": {
+    text: "\ueb49"
+},
+".icon-play_arrow": {
+    text: "\ueb4a"
+},
+".icon-play_circle_filled": {
+    text: "\ueb4b"
+},
+".icon-play_circle_outline": {
+    text: "\ueb4c"
+},
+".icon-play_for_work": {
+    text: "\ueb4d"
+},
+".icon-playlist_add": {
+    text: "\ueb4e"
+},
+".icon-playlist_add_check": {
+    text: "\ueb4f"
+},
+".icon-playlist_play": {
+    text: "\ueb50"
+},
+".icon-plus_one": {
+    text: "\ueb51"
+},
+".icon-polymer": {
+    text: "\ueb52"
+},
+".icon-pool": {
+    text: "\ueb53"
+},
+".icon-portable_wifi_off": {
+    text: "\ueb54"
+},
+".icon-portrait": {
+    text: "\ueb55"
+},
+".icon-power": {
+    text: "\ueb56"
+},
+".icon-power_input": {
+    text: "\ueb57"
+},
+".icon-power_settings_new": {
+    text: "\ueb58"
+},
+".icon-pregnant_woman": {
+    text: "\ueb59"
+},
+".icon-present_to_all": {
+    text: "\ueb5a"
+},
+".icon-priority_high": {
+    text: "\ueb5b"
+},
+".icon-public": {
+    text: "\ueb5c"
+},
+".icon-publish": {
+    text: "\ueb5d"
+},
+".icon-queue_music": {
+    text: "\ueb5e"
+},
+".icon-queue_play_next": {
+    text: "\ueb5f"
+},
+".icon-radio": {
+    text: "\ueb60"
+},
+".icon-radio_button_checked": {
+    text: "\ueb61"
+},
+".icon-rate_review": {
+    text: "\ueb62"
+},
+".icon-receipt": {
+    text: "\ueb63"
+},
+".icon-recent_actors": {
+    text: "\ueb64"
+},
+".icon-record_voice_over": {
+    text: "\ueb65"
+},
+".icon-redo": {
+    text: "\ueb66"
+},
+".icon-refresh": {
+    text: "\ueb67"
+},
+".icon-remove": {
+    text: "\ueb68"
+},
+".icon-remove_circle_outline": {
+    text: "\ueb69"
+},
+".icon-remove_from_queue": {
+    text: "\ueb6a"
+},
+".icon-visibility": {
+    text: "\ueb6b"
+},
+".icon-remove_shopping_cart": {
+    text: "\ueb6c"
+},
+".icon-reorder": {
+    text: "\ueb6d"
+},
+".icon-repeat": {
+    text: "\ueb6e"
+},
+".icon-repeat_one": {
+    text: "\ueb6f"
+},
+".icon-replay": {
+    text: "\ueb70"
+},
+".icon-replay_10": {
+    text: "\ueb71"
+},
+".icon-replay_30": {
+    text: "\ueb72"
+},
+".icon-replay_5": {
+    text: "\ueb73"
+},
+".icon-reply": {
+    text: "\ueb74"
+},
+".icon-reply_all": {
+    text: "\ueb75"
+},
+".icon-report": {
+    text: "\ueb76"
+},
+".icon-warning": {
+    text: "\ueb77"
+},
+".icon-restaurant": {
+    text: "\ueb78"
+},
+".icon-restore_page": {
+    text: "\ueb79"
+},
+".icon-ring_volume": {
+    text: "\ueb7a"
+},
+".icon-room_service": {
+    text: "\ueb7b"
+},
+".icon-rotate_90_degrees_ccw": {
+    text: "\ueb7c"
+},
+".icon-rotate_left": {
+    text: "\ueb7d"
+},
+".icon-rotate_right": {
+    text: "\ueb7e"
+},
+".icon-rounded_corner": {
+    text: "\ueb7f"
+},
+".icon-router": {
+    text: "\ueb80"
+},
+".icon-rowing": {
+    text: "\ueb81"
+},
+".icon-rss_feed": {
+    text: "\ueb82"
+},
+".icon-rv_hookup": {
+    text: "\ueb83"
+},
+".icon-satellite": {
+    text: "\ueb84"
+},
+".icon-save": {
+    text: "\ueb85"
+},
+".icon-scanner": {
+    text: "\ueb86"
+},
+".icon-school": {
+    text: "\ueb87"
+},
+".icon-screen_lock_landscape": {
+    text: "\ueb88"
+},
+".icon-screen_lock_portrait": {
+    text: "\ueb89"
+},
+".icon-screen_lock_rotation": {
+    text: "\ueb8a"
+},
+".icon-screen_rotation": {
+    text: "\ueb8b"
+},
+".icon-screen_share": {
+    text: "\ueb8c"
+},
+".icon-sd_storage": {
+    text: "\ueb8d"
+},
+".icon-search": {
+    text: "\ueb8e"
+},
+".icon-security": {
+    text: "\ueb8f"
+},
+".icon-select_all": {
+    text: "\ueb90"
+},
+".icon-send": {
+    text: "\ueb91"
+},
+".icon-sentiment_dissatisfied": {
+    text: "\ueb92"
+},
+".icon-sentiment_neutral": {
+    text: "\ueb93"
+},
+".icon-sentiment_satisfied": {
+    text: "\ueb94"
+},
+".icon-sentiment_very_dissatisfied": {
+    text: "\ueb95"
+},
+".icon-sentiment_very_satisfied": {
+    text: "\ueb96"
+},
+".icon-settings": {
+    text: "\ueb97"
+},
+".icon-settings_applications": {
+    text: "\ueb98"
+},
+".icon-settings_backup_restore": {
+    text: "\ueb99"
+},
+".icon-settings_bluetooth": {
+    text: "\ueb9a"
+},
+".icon-settings_brightness": {
+    text: "\ueb9b"
+},
+".icon-settings_cell": {
+    text: "\ueb9c"
+},
+".icon-settings_ethernet": {
+    text: "\ueb9d"
+},
+".icon-settings_input_antenna": {
+    text: "\ueb9e"
+},
+".icon-settings_input_composite": {
+    text: "\ueb9f"
+},
+".icon-settings_input_hdmi": {
+    text: "\ueba0"
+},
+".icon-settings_input_svideo": {
+    text: "\ueba1"
+},
+".icon-settings_overscan": {
+    text: "\ueba2"
+},
+".icon-settings_phone": {
+    text: "\ueba3"
+},
+".icon-settings_power": {
+    text: "\ueba4"
+},
+".icon-settings_remote": {
+    text: "\ueba5"
+},
+".icon-settings_system_daydream": {
+    text: "\ueba6"
+},
+".icon-settings_voice": {
+    text: "\ueba7"
+},
+".icon-share": {
+    text: "\ueba8"
+},
+".icon-shop": {
+    text: "\ueba9"
+},
+".icon-shop_two": {
+    text: "\uebaa"
+},
+".icon-shopping_basket": {
+    text: "\uebab"
+},
+".icon-short_text": {
+    text: "\uebac"
+},
+".icon-show_chart": {
+    text: "\uebad"
+},
+".icon-shuffle": {
+    text: "\uebae"
+},
+".icon-signal_cellular_4_bar": {
+    text: "\uebaf"
+},
+".icon-signal_cellular_connected_no_internet_4_bar": {
+    text: "\uebb0"
+},
+".icon-signal_cellular_null": {
+    text: "\uebb1"
+},
+".icon-signal_cellular_off": {
+    text: "\uebb2"
+},
+".icon-signal_wifi_4_bar": {
+    text: "\uebb3"
+},
+".icon-signal_wifi_4_bar_lock": {
+    text: "\uebb4"
+},
+".icon-signal_wifi_off": {
+    text: "\uebb5"
+},
+".icon-sim_card": {
+    text: "\uebb6"
+},
+".icon-sim_card_alert": {
+    text: "\uebb7"
+},
+".icon-skip_next": {
+    text: "\uebb8"
+},
+".icon-skip_previous": {
+    text: "\uebb9"
+},
+".icon-slideshow": {
+    text: "\uebba"
+},
+".icon-slow_motion_video": {
+    text: "\uebbb"
+},
+".icon-stay_primary_portrait": {
+    text: "\uebbc"
+},
+".icon-smoke_free": {
+    text: "\uebbd"
+},
+".icon-smoking_rooms": {
+    text: "\uebbe"
+},
+".icon-textsms": {
+    text: "\uebbf"
+},
+".icon-snooze": {
+    text: "\uebc0"
+},
+".icon-sort": {
+    text: "\uebc1"
+},
+".icon-sort_by_alpha": {
+    text: "\uebc2"
+},
+".icon-spa": {
+    text: "\uebc3"
+},
+".icon-space_bar": {
+    text: "\uebc4"
+},
+".icon-speaker": {
+    text: "\uebc5"
+},
+".icon-speaker_group": {
+    text: "\uebc6"
+},
+".icon-speaker_notes": {
+    text: "\uebc7"
+},
+".icon-speaker_notes_off": {
+    text: "\uebc8"
+},
+".icon-speaker_phone": {
+    text: "\uebc9"
+},
+".icon-spellcheck": {
+    text: "\uebca"
+},
+".icon-star_border": {
+    text: "\uebcb"
+},
+".icon-star_half": {
+    text: "\uebcc"
+},
+".icon-stars": {
+    text: "\uebcd"
+},
+".icon-stay_primary_landscape": {
+    text: "\uebce"
+},
+".icon-stop": {
+    text: "\uebcf"
+},
+".icon-stop_screen_share": {
+    text: "\uebd0"
+},
+".icon-storage": {
+    text: "\uebd1"
+},
+".icon-store_mall_directory": {
+    text: "\uebd2"
+},
+".icon-straighten": {
+    text: "\uebd3"
+},
+".icon-streetview": {
+    text: "\uebd4"
+},
+".icon-strikethrough_s": {
+    text: "\uebd5"
+},
+".icon-style": {
+    text: "\uebd6"
+},
+".icon-subdirectory_arrow_left": {
+    text: "\uebd7"
+},
+".icon-subdirectory_arrow_right": {
+    text: "\uebd8"
+},
+".icon-subject": {
+    text: "\uebd9"
+},
+".icon-subscriptions": {
+    text: "\uebda"
+},
+".icon-subtitles": {
+    text: "\uebdb"
+},
+".icon-subway": {
+    text: "\uebdc"
+},
+".icon-supervisor_account": {
+    text: "\uebdd"
+},
+".icon-surround_sound": {
+    text: "\uebde"
+},
+".icon-swap_calls": {
+    text: "\uebdf"
+},
+".icon-swap_horiz": {
+    text: "\uebe0"
+},
+".icon-swap_vert": {
+    text: "\uebe1"
+},
+".icon-swap_vertical_circle": {
+    text: "\uebe2"
+},
+".icon-switch_camera": {
+    text: "\uebe3"
+},
+".icon-switch_video": {
+    text: "\uebe4"
+},
+".icon-sync_disabled": {
+    text: "\uebe5"
+},
+".icon-sync_problem": {
+    text: "\uebe6"
+},
+".icon-system_update": {
+    text: "\uebe7"
+},
+".icon-system_update_alt": {
+    text: "\uebe8"
+},
+".icon-tab": {
+    text: "\uebe9"
+},
+".icon-tab_unselected": {
+    text: "\uebea"
+},
+".icon-tablet": {
+    text: "\uebeb"
+},
+".icon-tablet_android": {
+    text: "\uebec"
+},
+".icon-tablet_mac": {
+    text: "\uebed"
+},
+".icon-tap_and_play": {
+    text: "\uebee"
+},
+".icon-text_fields": {
+    text: "\uebef"
+},
+".icon-text_format": {
+    text: "\uebf0"
+},
+".icon-texture": {
+    text: "\uebf1"
+},
+".icon-thumb_down": {
+    text: "\uebf2"
+},
+".icon-thumb_up": {
+    text: "\uebf3"
+},
+".icon-thumbs_up_down": {
+    text: "\uebf4"
+},
+".icon-timelapse": {
+    text: "\uebf5"
+},
+".icon-timeline": {
+    text: "\uebf6"
+},
+".icon-timer": {
+    text: "\uebf7"
+},
+".icon-timer_10": {
+    text: "\uebf8"
+},
+".icon-timer_3": {
+    text: "\uebf9"
+},
+".icon-timer_off": {
+    text: "\uebfa"
+},
+".icon-title": {
+    text: "\uebfb"
+},
+".icon-toc": {
+    text: "\uebfc"
+},
+".icon-today": {
+    text: "\uebfd"
+},
+".icon-toll": {
+    text: "\uebfe"
+},
+".icon-tonality": {
+    text: "\uebff"
+},
+".icon-touch_app": {
+    text: "\uec00"
+},
+".icon-toys": {
+    text: "\uec01"
+},
+".icon-track_changes": {
+    text: "\uec02"
+},
+".icon-traffic": {
+    text: "\uec03"
+},
+".icon-train": {
+    text: "\uec04"
+},
+".icon-tram": {
+    text: "\uec05"
+},
+".icon-transfer_within_a_station": {
+    text: "\uec06"
+},
+".icon-transform": {
+    text: "\uec07"
+},
+".icon-translate": {
+    text: "\uec08"
+},
+".icon-trending_down": {
+    text: "\uec09"
+},
+".icon-trending_flat": {
+    text: "\uec0a"
+},
+".icon-trending_up": {
+    text: "\uec0b"
+},
+".icon-tune": {
+    text: "\uec0c"
+},
+".icon-tv": {
+    text: "\uec0d"
+},
+".icon-unarchive": {
+    text: "\uec0e"
+},
+".icon-undo": {
+    text: "\uec0f"
+},
+".icon-unfold_less": {
+    text: "\uec10"
+},
+".icon-unfold_more": {
+    text: "\uec11"
+},
+".icon-update": {
+    text: "\uec12"
+},
+".icon-usb": {
+    text: "\uec13"
+},
+".icon-verified_user": {
+    text: "\uec14"
+},
+".icon-vertical_align_bottom": {
+    text: "\uec15"
+},
+".icon-vertical_align_center": {
+    text: "\uec16"
+},
+".icon-vertical_align_top": {
+    text: "\uec17"
+},
+".icon-vibration": {
+    text: "\uec18"
+},
+".icon-video_call": {
+    text: "\uec19"
+},
+".icon-video_label": {
+    text: "\uec1a"
+},
+".icon-video_library": {
+    text: "\uec1b"
+},
+".icon-videocam": {
+    text: "\uec1c"
+},
+".icon-videocam_off": {
+    text: "\uec1d"
+},
+".icon-videogame_asset": {
+    text: "\uec1e"
+},
+".icon-view_agenda": {
+    text: "\uec1f"
+},
+".icon-view_array": {
+    text: "\uec20"
+},
+".icon-view_carousel": {
+    text: "\uec21"
+},
+".icon-view_column": {
+    text: "\uec22"
+},
+".icon-view_comfy": {
+    text: "\uec23"
+},
+".icon-view_compact": {
+    text: "\uec24"
+},
+".icon-view_day": {
+    text: "\uec25"
+},
+".icon-view_headline": {
+    text: "\uec26"
+},
+".icon-view_list": {
+    text: "\uec27"
+},
+".icon-view_module": {
+    text: "\uec28"
+},
+".icon-view_quilt": {
+    text: "\uec29"
+},
+".icon-view_stream": {
+    text: "\uec2a"
+},
+".icon-view_week": {
+    text: "\uec2b"
+},
+".icon-vignette": {
+    text: "\uec2c"
+},
+".icon-visibility_off": {
+    text: "\uec2d"
+},
+".icon-voice_chat": {
+    text: "\uec2e"
+},
+".icon-voicemail": {
+    text: "\uec2f"
+},
+".icon-volume_down": {
+    text: "\uec30"
+},
+".icon-volume_mute": {
+    text: "\uec31"
+},
+".icon-volume_off": {
+    text: "\uec32"
+},
+".icon-volume_up": {
+    text: "\uec33"
+},
+".icon-vpn_key": {
+    text: "\uec34"
+},
+".icon-vpn_lock": {
+    text: "\uec35"
+},
+".icon-wallpaper": {
+    text: "\uec36"
+},
+".icon-watch": {
+    text: "\uec37"
+},
+".icon-watch_later": {
+    text: "\uec38"
+},
+".icon-wb_auto": {
+    text: "\uec39"
+},
+".icon-wb_incandescent": {
+    text: "\uec3a"
+},
+".icon-wb_iridescent": {
+    text: "\uec3b"
+},
+".icon-wb_sunny": {
+    text: "\uec3c"
+},
+".icon-wc": {
+    text: "\uec3d"
+},
+".icon-web": {
+    text: "\uec3e"
+},
+".icon-web_asset": {
+    text: "\uec3f"
+},
+".icon-weekend": {
+    text: "\uec40"
+},
+".icon-whatshot": {
+    text: "\uec41"
+},
+".icon-widgets": {
+    text: "\uec42"
+},
+".icon-wifi": {
+    text: "\uec43"
+},
+".icon-wifi_lock": {
+    text: "\uec44"
+},
+".icon-wifi_tethering": {
+    text: "\uec45"
+},
+".icon-work": {
+    text: "\uec46"
+},
+".icon-wrap_text": {
+    text: "\uec47"
+},
+".icon-youtube_searched_for": {
+    text: "\uec48"
+},
+".icon-zoom_in": {
+    text: "\uec49"
+},
+".icon-zoom_out": {
+    text: "\uec4a"
+},
+".icon-zoom_out_map": {
+    text: "\uec4b"
+}
+

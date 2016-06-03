@@ -1,0 +1,50 @@
+".template": {
+	height: 93,
+	width: Ti.UI.FILL,
+},
+
+"#profileDetails": {
+	top: 0, 
+	left: 95, 
+	right: 0, 
+	bottom: 0,
+},
+
+"#name": {
+	left: 0, top: 12,
+	color: "black",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	font: { fontSize: 16 }
+},
+
+"#speciality": {
+	left: 0, top: 0,
+	color: "#999999",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	font: { fontSize: 14 }
+},
+
+".avatar":{
+	top: 8,
+	left: 10,
+	borderRadius: 38,
+},
+
+"#elementsList":{
+	backgroundColor:"#f6f6f6"
+},
+
+"#profileSpecs": {
+	left: 0, right: 0, top: 5,
+	layout: "horizontal",
+},
+
+"#reviews": {
+	left: 10
+},
+
+".icon-star": {
+	color: "#F5A623"
+}
+
+

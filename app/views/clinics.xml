@@ -1,0 +1,32 @@
+<Alloy>
+	<Window class="vgroup hideNav sb-style-light-content" title="Doctors">
+		<Require src="navbar" id="navbar" platform="ios" />
+		<Menu id="menu" platform="android">
+			<MenuItem showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM" title="Search" icon="Ti.Android.R.drawable.ic_menu_search">
+				<ActionView>
+                    <SearchView ns="Ti.UI.Android" id="searchBar" platform="android" />
+                </ActionView>
+            </MenuItem>
+        </Menu>
+		<SearchBar id="searchBar" platform="ios" />
+		<ListView id="elementsList" defaultItemTemplate="elementTemplate" top="-1">
+		    <Templates>
+		        <ItemTemplate name="elementTemplate" class="template">
+		        	<View class="vgroup">
+			            <ImageView bindId="image" id="image" width="100%" />
+			            <View id="profileDetails">
+			                <Label class="large-text left" bindId="name" id="name" />
+			                <Label class="gray-light left" bindId="address" id="address" />
+			                <View id="profileSpecs">
+			                	<Label bindId="rating" id="rating" />
+			                	<Label class="icon icon-star" />
+			                    <Label class="gray-light" bindId="reviews" id="reviews" />
+			                </View>
+			            </View>
+			        </View>
+		        </ItemTemplate>
+		    </Templates>
+			<ListSection name="elements" />
+		</ListView>
+	</Window>
+</Alloy>

@@ -1,0 +1,54 @@
+
+		
+		<!-- iOS navigation buttons --
+		<RightNavButtons platform="ios">
+           	<Button title="btn 1"/> 
+        	<Button title="btn 2"/> 
+        </RightNavButtons>
+        
+         Android navigation 
+		<Menu id="menu" platform="android">
+			<MenuItem showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM" title="Search" icon="Ti.Android.R.drawable.ic_menu_search">
+				<ActionView>
+                    <SearchView ns="Ti.UI.Android" id="searchBar" platform="android" />
+                </ActionView>
+            </MenuItem>
+            <MenuItem id="bookmarkBtn" text="Bookmarks" icon="Ti.Android.R.drawable.ic_menu_preferences" showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM"/>
+        </Menu>
+        
+        
+        <SearchBar id="searchBar" platform="ios" / -->
+
+<Alloy>
+	<Window class="vgroup hideNav sb-style-light-content" title="Doctors">
+		<Require src="navbar" id="navbar" platform="ios" />
+		<Menu id="menu" platform="android">
+			<MenuItem showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM" title="Search" icon="Ti.Android.R.drawable.ic_menu_search">
+				<ActionView>
+                    <SearchView ns="Ti.UI.Android" id="searchBar" platform="android" />
+                </ActionView>
+            </MenuItem>
+        </Menu>
+		<SearchBar id="searchBar" platform="ios" />
+		<ListView id="elementsList" defaultItemTemplate="elementTemplate">
+		    <Templates>
+		        <ItemTemplate name="elementTemplate" class="template">
+		        	<View class="shadow" platform="android" />
+		            <View class="tile" platform="android" />
+		            <ImageView bindId="image" class="avatar thumbnail" />
+		            <View platform="android" class="avatar thumbnail smooth-border" />
+		            <View id="profileDetails" class="vgroup">
+		                <Label class="large-text left" bindId="name" id="name" />
+		                <Label class="gray-light left" bindId="speciality" id="speciality" />
+		                <View id="profileSpecs">
+		                	<Label bindId="rating" id="rating" />
+		                	<Label class="icon icon-star" />
+		                    <Label class="gray-light" bindId="reviews" id="reviews" />
+		                </View>
+		            </View>
+		        </ItemTemplate>
+		    </Templates>
+			<ListSection name="elements" />
+		</ListView>
+	</Window>
+</Alloy>

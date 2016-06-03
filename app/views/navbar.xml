@@ -1,0 +1,10 @@
+<Alloy>
+	<View id="navBar" zIndex="400">
+		<View id="navBarContent">
+			<Label class="icon iconBack" />
+			<Label id="pageTitle" text="Page title" />
+			<Label class="icon iconLocation" />
+			<Label class="icon iconSearch" />
+		</View>
+	</View>
+</Alloy>
